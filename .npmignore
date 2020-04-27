@@ -1,0 +1,7 @@
+!dist
+src
+node_modules
+package-lock.json
+.git
+tsconfig.tsbuildinfo
+tsconfig.json

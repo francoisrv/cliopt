@@ -1,0 +1,36 @@
+{
+  "name": "cliopt",
+  "version": "1.0.0",
+  "description": "cliopt ===",
+  "main": "dist/cliopt.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest dist/test",
+    "prepublishOnly": "tsc build && npm t"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francoisrv/cliopt.git"
+  },
+  "keywords": [
+    "cli",
+    "js",
+    "node"
+  ],
+  "author": "that guy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/francoisrv/cliopt/issues"
+  },
+  "homepage": "https://github.com/francoisrv/cliopt#readme",
+  "dependencies": {
+    "@types/lodash.includes": "^4.3.6",
+    "@types/lodash.set": "^4.3.6",
+    "lodash.includes": "^4.3.0",
+    "lodash.set": "^4.3.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "jest": "^25.4.0"
+  }
+}
