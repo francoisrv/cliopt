@@ -1,12 +1,13 @@
 {
   "name": "clipop",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "clipop ===",
   "main": "dist/clipop.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/clipop.d.ts",
   "scripts": {
     "test": "jest dist/test",
-    "prepublishOnly": "tsc build && npm t"
+    "build": "rm -rf dist && tsc",
+    "prepublishOnly": "npm run build && npm t"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,7 @@
   },
   "devDependencies": {
     "@types/jest": "^25.2.1",
-    "jest": "^25.4.0"
+    "jest": "^25.4.0",
+    "typescript": "^3.8.3"
   }
 }
