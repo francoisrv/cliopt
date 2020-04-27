@@ -1,4 +1,4 @@
-cliopt
+clipop
 ===
 
 Utility to parse cli options into a JSON object
@@ -37,15 +37,15 @@ my-node-cli-app --names.firstname joe --hobbies[0].name hockey
 ## Usage
 
 ```bash
-npm install cliopt
+npm install clipop
 ```
 
 ```ts
-import cliopt from 'cliopt'
+import clipop from 'clipop'
 
 const [,, ...params] = process.argv
 
-const options = cliopt(...params) // cliopt accepts a spread array of strings
+const options = clipop(...params) // clipop accepts a spread array of strings
 ```
 
 ## Value declarations

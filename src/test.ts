@@ -1,4 +1,4 @@
-import cliopt from "./cliopt"
+import clipop from './clipop'
 
 const tests = [
   {
@@ -72,6 +72,6 @@ const tests = [
 
 for (const t of tests) {
   test(t.args.join(' '), () => {
-    expect(cliopt(...t.args)).toEqual(t.expect)
+    expect(clipop(...t.args)).toEqual(t.expect)
   })
 }
