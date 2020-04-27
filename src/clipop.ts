@@ -2,13 +2,13 @@ import makeParams from './makeParams'
 import makeOptions from './makeOptions'
 
 /**
- * cliopt - https://github.com/francoisrv/cliopt
+ * clipop - https://github.com/francoisrv/cliopt
  * Utility to parse cli options into a JSON object
  * @param rest {string[]} input to be parsed
- * @example cliopt('--foo', 'bar') => { "foo": "bar" }
+ * @example clipop('--foo', 'bar') => { "foo": "bar" }
  * @returns JSON object
  */
-export default function cliopt(...rest: string[]) {
+export default function clipop(...rest: string[]) {
   const params = makeParams(...rest)
   return makeOptions(...params)
 }
