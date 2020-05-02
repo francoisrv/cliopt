@@ -1,6 +1,6 @@
 {
   "name": "clipop",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "clipop ===",
   "main": "dist/clipop.js",
   "types": "dist/clipop.d.ts",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/francoisrv/clipopt.git"
+    "url": "git+https://github.com/francoisrv/cliopt.git"
   },
   "keywords": [
     "cli",
@@ -21,9 +21,9 @@
   "author": "that guy",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/francoisrv/clipopt/issues"
+    "url": "https://github.com/francoisrv/cliopt/issues"
   },
-  "homepage": "https://github.com/francoisrv/clipopt#readme",
+  "homepage": "https://github.com/francoisrv/cliopt#readme",
   "dependencies": {
     "@types/lodash.includes": "^4.3.6",
     "@types/lodash.set": "^4.3.6",
