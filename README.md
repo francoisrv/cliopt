@@ -4,7 +4,7 @@ clipop
 Utility to parse cli options into a JSON object
 
 ```bash
-my-node-cli-app --name "john doe" --isAdmin
+my-app --name "john doe" --is-admin
 ```
 
 Options will be parsed like this:
@@ -12,14 +12,14 @@ Options will be parsed like this:
 ```json
 {
   "name": "john doe",
-  "isAdmin": true
+  "is-admin": true
 }
 ```
 
 You can also use notations:
 
 ```bash
-my-node-cli-app --names.firstname joe --hobbies[0].name hockey 
+my-app --names.firstname joe --hobbies[0].name hockey 
 ```
 ```json
 {
@@ -31,6 +31,18 @@ my-node-cli-app --names.firstname joe --hobbies[0].name hockey
       "name": "hockey"
     }
   ]
+}
+```
+
+This utility only returns options and other arguments are ignored:
+
+```bash
+my-app connect --uri localhost --ssl 
+```
+```json
+{
+  "uri": "localhost",
+  "ssl": true
 }
 ```
 

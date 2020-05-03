@@ -67,7 +67,7 @@ const tests = [
   {
     args: ['--foo', 'null'],
     expect: { foo: 'null' }
-  },
+  }
 ]
 
 for (const t of tests) {
