@@ -74,3 +74,9 @@ const options = clipop(...params) // clipop accepts a spread array of strings
 --foo     ---false    # false
 --foo     ---null     # null
 ```
+
+## Typescript suppor
+
+```ts
+clipop<{ name: string }>(...params) // my-app --name joe
+```

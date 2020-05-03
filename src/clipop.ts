@@ -8,7 +8,7 @@ import makeOptions from './makeOptions'
  * @example clipop('--foo', 'bar') => { "foo": "bar" }
  * @returns JSON object
  */
-export default function clipop(...rest: string[]) {
+export default function clipop<T extends any>(...rest: string[]): T {
   const params = makeParams(...rest)
   return makeOptions(...params)
 }

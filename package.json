@@ -1,6 +1,6 @@
 {
   "name": "clipop",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "clipop ===",
   "main": "dist/clipop.js",
   "types": "dist/clipop.d.ts",
