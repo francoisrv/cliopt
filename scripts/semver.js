@@ -14,7 +14,7 @@ let nextVersion = content.version
 
 if (parts[0] === 'refs' && parts[1] === 'heads') {
   if (parts[2] === 'feature') {
-    nextVersion = semver.inc(content.version, 'minor', 'beta')
+    nextVersion = semver.inc(content.version, 'preminor')
   } else if (parts[2] === 'fix') {
     nextVersion = semver.inc(content.version, 'patch')
   }
