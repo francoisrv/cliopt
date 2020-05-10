@@ -16,7 +16,13 @@ if (parts[0] === 'refs' && parts[1] === 'heads') {
   if (parts[2] === 'feature') {
     nextVersion = semver.inc(content.version, 'preminor')
   } else if (parts[2] === 'fix') {
-    nextVersion = semver.inc(content.version, 'patch')
+    nextVersion = semver.inc(content.version, 'prepatch')
   }
-  console.log(nextVersion)
+}
+
+if (nextVersion !== content.version) {
+  fs.writeFileSync(path.join(__dirname, '../package.json'), JSON.stringify({
+    ...content,
+    version: nextVersion
+  }, null, 2))
 }
