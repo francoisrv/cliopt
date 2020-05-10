@@ -10,8 +10,13 @@ const source = fs.readFileSync(path.join(__dirname, '../package.json'))
 
 const content = JSON.parse(source.toString())
 
+let nextVersion = content.version
+
 if (parts[0] === 'refs' && parts[1] === 'heads') {
   if (parts[2] === 'feature') {
-    console.log(semver.inc(content.version, 'minor'))
+    nextVersion = semver.inc(content.version, 'minor', 'beta')
+  } else if (parts[2] === 'fix') {
+    nextVersion = semver.inc(content.version, 'patch')
   }
+  console.log(nextVersion)
 }
