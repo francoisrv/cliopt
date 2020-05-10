@@ -21,3 +21,12 @@ jobs:
       
       - name: Update version
         run: node scripts/semver
+
+      - name: Save version
+      - uses: EndBug/add-and-commit@v4 # You can change this to use a specific version
+        with:
+          add: 'package.json'
+          message: 'Update version'
+        env:
+          # This is necessary in order to push a commit to the repo
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
