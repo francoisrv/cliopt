@@ -1,7 +1,7 @@
 clipop
 ===
 
-Utility to parse cli options into a JSON object
+Utility to parse terminal input into a JSON object
 
 ```bash
 my-app --name "john doe" --is-admin
