@@ -28,3 +28,5 @@ if (nextVersion !== content.version) {
     version: nextVersion
   }, null, 2))
 }
+
+console.log(nextVersion)
