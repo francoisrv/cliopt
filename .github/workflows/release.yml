@@ -2,7 +2,7 @@ name: Update version according to git flow
 on:
   push:
     branches:
-      - develop
+      - master
 
 jobs:
   build:
