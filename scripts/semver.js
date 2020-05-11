@@ -17,6 +17,8 @@ if (parts[0] === 'refs' && parts[1] === 'heads') {
     nextVersion = semver.inc(content.version, 'preminor')
   } else if (parts[2] === 'fix') {
     nextVersion = semver.inc(content.version, 'prepatch')
+  } else if (parts[2] === 'develop') {
+    nextVersion = semver.inc(content.version, 'release')
   }
 }
 
