@@ -32,4 +32,6 @@ if (nextVersion !== content.version) {
   }, null, 2))
 }
 
+core.debug(`Next version is ${ nextVersion }`)
+
 core.setOutput('version', nextVersion)
