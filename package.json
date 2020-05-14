@@ -1,6 +1,6 @@
 {
   "name": "clipop",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Utility to parse terminal input into a JSON object",
   "main": "dist/clipop.js",
   "types": "dist/clipop.d.ts",
