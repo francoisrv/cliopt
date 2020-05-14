@@ -21,13 +21,13 @@ jobs:
       
       - name: Update version
         run: node scripts/semver
+        id: version
 
       - name: Save version
         uses: EndBug/add-and-commit@v4
         with:
           add: 'package.json'
           message: 'Update version'
-        id: version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
