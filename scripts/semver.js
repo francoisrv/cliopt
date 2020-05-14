@@ -19,7 +19,7 @@ if (parts[0] === 'refs' && parts[1] === 'heads') {
   } else if (parts[2] === 'fix') {
     nextVersion = semver.inc(content.version, 'prepatch')
   } else if (parts[2] === 'develop' || parts[2] === 'master') {
-    nextVersion = semver.inc(content.version, 'release')
+    nextVersion = semver.inc(content.version, 'patch')
   }
 }
 
