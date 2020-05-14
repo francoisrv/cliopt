@@ -1,8 +1,10 @@
 #! /usr/bin/env node
 
 const fs = require('fs')
+const child_process = require('child_process')
 const path = require('path')
 const semver = require('semver')
+const core = require('@actions/core')
 
 const parts = process.env.GITHUB_REF.split(/\//)
 
@@ -19,6 +21,7 @@ if (parts[0] === 'refs' && parts[1] === 'heads') {
     nextVersion = semver.inc(content.version, 'prepatch')
   } else if (parts[2] === 'develop') {
     nextVersion = semver.inc(content.version, 'release')
+    child_process.execSync(`git tag`)
   }
 }
 
@@ -29,4 +32,4 @@ if (nextVersion !== content.version) {
   }, null, 2))
 }
 
-console.log(nextVersion)
+core.setOutput('version', nextVersion)
